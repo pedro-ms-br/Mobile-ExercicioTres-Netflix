@@ -8,6 +8,16 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/imageCapa"
+        android:layout_width="0dp"
+        android:layout_height="317dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fnaf1" />
+
+    <ImageView
         android:id="@+id/imageViewNomeFilme"
         android:layout_width="150dp"
         android:layout_height="100dp"
@@ -87,6 +97,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/textViewSciFi"
         app:layout_constraintEnd_toStartOf="@+id/textViewSciFi"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="@id/linhaGuiaEsquerda"
         app:layout_constraintTop_toTopOf="@+id/textViewSciFi" />
 
@@ -131,15 +142,14 @@
         android:id="@+id/btaAssistir"
         android:layout_width="125dp"
         android:layout_height="51dp"
+        android:layout_marginTop="28dp"
         android:drawableLeft="@drawable/icexecutar"
         android:text="Assistir"
         android:textSize="10sp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toStartOf="@+id/btdetalhes"
+        app:layout_constraintEnd_toStartOf="@+id/btDetalhes"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toTopOf="@id/textViewSciFi"
         app:layout_constraintStart_toEndOf="@+id/btMinhaLista"
-        tools:layout_editor_absoluteY="313dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSciFi" />
 
     <Button
         android:id="@+id/btMinhaLista"
@@ -154,24 +164,70 @@
         app:layout_constraintBottom_toBottomOf="@+id/btaAssistir"
         app:layout_constraintEnd_toStartOf="@+id/btaAssistir"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/linhaGuiaEsquerda"
+        app:layout_constraintStart_toStartOf="@+id/linhaGuiaEsquerda"
         app:layout_constraintTop_toTopOf="@+id/btaAssistir" />
 
     <Button
-        android:id="@+id/btdetalhes"
+        android:id="@+id/btDetalhes"
         android:layout_width="116dp"
         android:layout_height="62dp"
         android:backgroundTint="@android:color/transparent"
-        android:drawableTop="@drawable/ic_informacao"
+        android:drawableTop="@drawable/icinformacao"
         android:padding="0dp"
         android:text="DETALHES"
         android:textSize="10sp"
         app:iconSize="8sp"
         app:layout_constraintBottom_toBottomOf="@+id/btaAssistir"
-        app:layout_constraintEnd_toEndOf="@id/linhaGuiaDireita"
+        app:layout_constraintEnd_toStartOf="@+id/linhaGuiaDireita"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btaAssistir"
         app:layout_constraintTop_toTopOf="@+id/btaAssistir" />
+
+    <ImageView
+        android:id="@+id/imageViewHouse"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewNaruto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLancamento"
+        app:srcCompat="@drawable/house1"
+        tools:layout_constraintStart_toStartOf="@id/linhaGuiaEsquerda" />
+
+    <ImageView
+        android:id="@+id/imageViewNaruto"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewHouse"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewDts"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewHouse"
+        app:layout_constraintTop_toTopOf="@+id/imageViewHouse"
+        app:srcCompat="@drawable/shippuden" />
+
+    <ImageView
+        android:id="@+id/imageViewDts"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewNaruto"
+        app:layout_constraintEnd_toEndOf="@id/linhaGuiaDireita"
+        app:layout_constraintEnd_toStartOf="@+id/linhaGuiaDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewNaruto"
+        app:layout_constraintTop_toTopOf="@+id/imageViewNaruto"
+        app:srcCompat="@drawable/f1dts" />
+
+    <TextView
+        android:id="@+id/textViewLancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Lançamento"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintStart_toStartOf="@+id/linhaGuiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/btaAssistir" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
