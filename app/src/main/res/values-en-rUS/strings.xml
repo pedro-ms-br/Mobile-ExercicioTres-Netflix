@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExercicioNetflix</string>
+    <string name="suspense">Suspense</string>
+    <string name="sci_fi">Sci-fi</string>
+    <string name="a_o">Action</string>
+    <string name="assistir">Watch now</string>
+    <string name="minha_lista">ADD TO MY LIST</string>
+    <string name="detalhes">MORE DETAILS</string>
+    <string name="lan_amento">Recently added</string>
+    <string name="s_ries">Series</string>
+    <string name="minha_lista_lower">My List</string>
+    <string name="filmes">Movies</string>
+    <string name="nome">Pedro Henrique Tavares Moraes</string>
+</resources>
